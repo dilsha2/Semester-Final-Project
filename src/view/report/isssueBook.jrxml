@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="isssueBook" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66eb669a-9e5e-471b-862a-438ed155dd16">
+	<parameter name="issueId" class="java.lang.String"/>
+	<parameter name="bookId" class="java.lang.String"/>
+	<parameter name="bookTitle" class="java.lang.String"/>
+	<parameter name="memberId" class="java.lang.String"/>
+	<parameter name="barrowedDate" class="java.lang.String"/>
+	<parameter name="dueDate" class="java.lang.String"/>
+	<parameter name="charge" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="-10" width="530" height="40" forecolor="#4D0DFC" uuid="bdc34255-65dd-4d5c-adaf-d583c250d44c"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WELCOME!!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="20" width="100" height="20" uuid="9d261117-4902-477b-9b7e-fcc8a574e95c"/>
+				<textElement>
+					<font fontName="Serif" size="14"/>
+				</textElement>
+				<text><![CDATA[Library Panadura]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="220" y="40" width="100" height="20" uuid="20d42340-2cdd-49a9-9b65-2e879f48af3c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="250" y="40" width="100" height="20" uuid="d7539bfa-244c-4f6b-8e26-e956b4e42920"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="55" width="240" height="40" uuid="c0622bca-a68c-4c4d-9887-a66dd5a9a601"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[NO 100/4 Galle rd, Panadura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="80" width="190" height="30" uuid="46b9fe99-358c-43a2-bf63-6bfe29f9136a"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[librarypanadura@gmail.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<line>
+				<reportElement x="-11" y="20" width="570" height="1" uuid="7df3a3d5-6530-4204-925d-6cea0ca0f9f9"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="118" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="0" width="100" height="30" uuid="90fc443e-921e-479b-9b08-13277a358f3a"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[ISSUE ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="40" width="100" height="30" uuid="7b7df965-3ddc-418e-a732-ff54c936eac5"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BOOK ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="80" width="110" height="30" uuid="94644396-21a4-4931-97ae-b28ba47c8d22"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BOOK TITLE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="0" width="100" height="30" uuid="21847f27-1e31-4c02-9671-eb0b27ec23b4"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{issueId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="40" width="100" height="30" uuid="cd4cd845-2ce0-4e7c-a51d-2cb4200924f7"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bookId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="80" width="130" height="30" uuid="b59539b5-3d58-4e4d-8e15-3ca486214873"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bookTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="237" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="10" width="100" height="30" uuid="340353ea-e93c-4522-b58a-bcc6f075e02c"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[MEMBER ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="50" width="160" height="30" uuid="b916ad49-825b-4024-b558-6a49f794091e"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BARROWED DATE : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="90" width="150" height="30" uuid="5dde71c9-506b-4bca-8cd8-c7f560effcf9"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[DUE DATE : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="130" width="100" height="30" uuid="d2333f7e-74a2-4b05-b871-c81cfd3cb722"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[CHARGE : ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="166" width="553" height="1" uuid="11dbe2ec-25a2-4e32-acc2-4a7b1103b4d7"/>
+			</line>
+			<staticText>
+				<reportElement x="225" y="185" width="150" height="30" forecolor="#6B5FBA" uuid="8085a573-1609-4e24-8533-edfb82e2b2aa"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[THANK YOU!!!]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="10" width="100" height="30" uuid="eb727688-7728-4c02-a6e5-c052f53af28d"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{memberId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="90" width="100" height="30" uuid="d3be4a22-3ab1-4210-aaa1-eb768765fcff"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dueDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="50" width="100" height="30" uuid="34dd334c-dac5-4b8b-9642-f846001be505"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{barrowedDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="130" width="100" height="30" uuid="299d71f6-2ab9-45fe-9a7a-88c42b75a5ae"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{charge}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

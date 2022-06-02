@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnBookFormController">
+   <children>
+      <Pane layoutX="1.0" layoutY="-2.0" prefHeight="31.0" prefWidth="723.0" style="-fx-background-color: #0598ff;" AnchorPane.bottomAnchor="537.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <Label layoutX="313.0" layoutY="4.0" prefHeight="20.0" prefWidth="83.0" text="Return Book" textFill="#ffecec">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ComboBox fx:id="cmbIssueId" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="129.0" promptText="ISSUE ID" />
+      <JFXTextField fx:id="txtBookId" labelFloat="true" layoutX="185.0" layoutY="50.0" prefHeight="25.0" prefWidth="113.0" promptText="BOOK ID">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBookTitle" labelFloat="true" layoutX="325.0" layoutY="50.0" prefHeight="25.0" prefWidth="113.0" promptText="BOOK TITLE">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMemberId" labelFloat="true" layoutX="464.0" layoutY="50.0" prefHeight="25.0" prefWidth="113.0" promptText="MEMBER ID">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBarrowedDate" labelFloat="true" layoutX="589.0" layoutY="50.0" prefHeight="25.0" prefWidth="113.0" promptText="BORROWED DATE">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFine" labelFloat="true" layoutX="168.0" layoutY="100.0" prefHeight="25.0" prefWidth="113.0" promptText="FINE">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCharge" labelFloat="true" layoutX="305.0" layoutY="101.0" prefHeight="25.0" prefWidth="113.0" promptText="CHARGE">
+         <font>
+            <Font name="System Bold" size="11.5" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="438.0" layoutY="102.0" onAction="#returnOnAction" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #0598ff;" text="Return" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblReturn" layoutX="9.0" layoutY="163.0" prefHeight="208.0" prefWidth="705.0">
+        <columns>
+          <TableColumn fx:id="colIssueId" prefWidth="75.0" text="ISSUE ID" />
+          <TableColumn fx:id="colBookId" prefWidth="75.0" text="BOOK ID" />
+            <TableColumn fx:id="colBookTitle" prefWidth="119.0" text="Book Title" />
+            <TableColumn fx:id="colMemberId" prefWidth="87.0" text="Member ID" />
+            <TableColumn fx:id="colBarrowedDate" prefWidth="105.0" text="Borrowed Date" />
+            <TableColumn fx:id="colReturnedDate" minWidth="0.0" prefWidth="94.0" text="Returned Date" />
+            <TableColumn fx:id="colFine" prefWidth="72.0" text="Fine" />
+            <TableColumn fx:id="colCharge" prefWidth="77.0" text="Charge" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="326.0" layoutY="479.0" onAction="#printOnAction" prefHeight="25.0" prefWidth="116.0" style="-fx-background-color: #04e0ce;" text="Print" />
+      <FontAwesomeIconView glyphName="PRINT" layoutX="340.0" layoutY="496.0" />
+      <TextArea fx:id="txtReturnBill" layoutX="477.0" layoutY="378.0" prefHeight="181.0" prefWidth="228.0" />
+      <JFXDatePicker fx:id="returnDate" layoutX="14.0" layoutY="100.0" prefHeight="25.0" prefWidth="129.0" />
+      <Label layoutX="14.0" layoutY="433.0" text="Total : " textFill="#3030e8">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="79.0" layoutY="433.0" text="0.0" textFill="#3030e8">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="581.0" layoutY="102.0" onAction="#clearOnAction" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: #0598ff;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="602.0" layoutY="118.0" />
+   </children>
+</AnchorPane>

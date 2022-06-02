@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="returnBook" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5980323c-91a5-483d-a4a1-1fabd75a813b">
+	<parameter name="iId" class="java.lang.String"/>
+	<parameter name="bId" class="java.lang.String"/>
+	<parameter name="bTitle" class="java.lang.String"/>
+	<parameter name="mId" class="java.lang.String"/>
+	<parameter name="bDate" class="java.lang.String"/>
+	<parameter name="rDate" class="java.lang.String"/>
+	<parameter name="fine" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="545" height="30" forecolor="#4F2DFA" uuid="6e6d57c4-d952-42c9-a75a-a4965a658f24">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                                       WELCOME!!!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="30" width="100" height="30" uuid="16efd6e4-4aa2-44cb-99b9-f3d73226dd53"/>
+				<textElement>
+					<font fontName="Serif" size="14"/>
+				</textElement>
+				<text><![CDATA[Library Panadura]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="260" y="50" width="100" height="30" uuid="6ccb8d45-1f5e-4b18-8796-7a0989b66ae4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="230" y="50" width="100" height="30" uuid="8841719c-9088-4c02-8d92-a1cfafe5999b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="60" width="210" height="30" uuid="c028b852-d599-4f2e-b49f-d16f359f636e"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[N0 100/4 Galle rd,Panadura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="80" width="190" height="30" uuid="39ae3592-1de1-4eb8-8ee8-d0ccebad3c58"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[librarypanadura@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-8" y="119" width="570" height="1" uuid="239fce79-102f-4bbd-93cf-a0ffd9232d7c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="445" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="10" width="100" height="30" uuid="f262da98-2226-46e4-a065-88889fed884e"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[ISSUE ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="50" width="100" height="30" uuid="16f7be95-11a0-4909-a5e9-38484ef46463"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BOOK ID :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="90" width="110" height="30" uuid="b384b1f9-922a-450c-9049-b04ce8452a66"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BOOK TITLE : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="130" width="120" height="30" uuid="630f5e3f-a672-4901-b6ed-fdc007f74952"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[ MEMBER ID : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="170" width="160" height="30" uuid="cdaf02c9-9e95-4d92-b312-f0c23aaffe77"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[BARROW DATE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="210" width="165" height="30" uuid="1e9bf823-7ad7-4f41-bd83-16489bb66556"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[RETURNED DATE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="250" width="100" height="30" uuid="299c37f4-d4dd-4b17-868c-fbd1d990ce3a"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[FINE : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="290" width="100" height="30" uuid="ce35b161-e71c-4c29-b46b-78550027230e"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<text><![CDATA[CHARGE : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="10" width="100" height="30" uuid="e4d6f010-5d3b-4187-a06d-d501c06f11a0"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{iId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="50" width="100" height="30" uuid="82cc0888-f99b-4c13-90e2-e74999624f91"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="90" width="245" height="30" uuid="eda58630-b8d6-4ba5-b631-ccdae57f43cd"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="130" width="100" height="30" uuid="03a89bb4-91ba-499f-abfc-b7dd0e96b3fe"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{mId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="170" width="100" height="30" uuid="567dc0ac-3756-4c31-9143-1974a96125a9"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="210" width="100" height="30" uuid="07315d0c-0b00-44ad-8167-77971232bc63"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="250" width="100" height="30" uuid="51746e88-78bd-4764-9494-f1d7c165038e"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fine}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="290" width="100" height="30" uuid="c953cdd4-73a4-4ffb-bbba-3f6a5d8464b3"/>
+				<textElement>
+					<font fontName="Serif" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{amount}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-8" y="350" width="570" height="1" uuid="0c3ef907-f0e7-4051-ad51-820e7cd0ee26"/>
+			</line>
+			<staticText>
+				<reportElement x="190" y="360" width="150" height="30" forecolor="#6B5FBA" uuid="2d090d34-f515-4e71-a902-cf665e1cf4d6"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[THANK YOU!!!]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

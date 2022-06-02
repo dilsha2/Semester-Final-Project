@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeFormController">
+   <children>
+      <Pane layoutX="2.0" layoutY="-2.0" prefHeight="31.0" prefWidth="723.0" style="-fx-background-color: #0598ff;" AnchorPane.bottomAnchor="536.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="320.0" layoutY="6.0" prefHeight="20.0" prefWidth="51.0" text="Income" textFill="#ffecec">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ComboBox fx:id="cmbMonth" layoutX="84.0" layoutY="116.0" onAction="#cmbMonthOnAction" prefWidth="150.0" promptText="Month" />
+      <TableView fx:id="tblIncome" layoutX="69.0" layoutY="179.0" prefHeight="237.0" prefWidth="586.0">
+        <columns>
+          <TableColumn fx:id="colIssueId" prefWidth="192.0" text="Issue ID" />
+          <TableColumn fx:id="colDate" prefWidth="200.0" text="Date" />
+            <TableColumn fx:id="colAmount" prefWidth="193.0" text="Amount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

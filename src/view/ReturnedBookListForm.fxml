@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="566.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnedBookListFormController">
+   <children>
+      <Pane layoutX="-9.0" layoutY="-1.0" prefHeight="31.0" prefWidth="723.0" style="-fx-background-color: #0598ff;" AnchorPane.bottomAnchor="535.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="290.0" layoutY="4.0" prefHeight="20.0" prefWidth="167.0" text="Returned Book List" textFill="#ffecec">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtSearchReturn" labelFloat="true" layoutX="137.0" layoutY="100.0" prefHeight="25.0" prefWidth="455.0" promptText="Member ID">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblReturnedBookList" layoutX="15.0" layoutY="164.0" prefHeight="325.0" prefWidth="698.0">
+        <columns>
+          <TableColumn fx:id="colMemberId" prefWidth="75.0" text="Member Id" />
+            <TableColumn fx:id="colBookId" text="Book Id" />
+            <TableColumn fx:id="colBookName" prefWidth="267.0" text="Book Name" />
+            <TableColumn fx:id="colBarrowedDate" prefWidth="135.0" text="Barrowed Date" />
+            <TableColumn fx:id="colReturnedDate" prefWidth="140.0" text="Returned Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

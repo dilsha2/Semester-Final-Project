@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="#fffdfd" glyphName="BOOK" layoutX="140.0" layoutY="236.0" size="75" />
+            <Text fill="#fff8f8" layoutX="84.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label layoutX="208.0" layoutY="414.0" text="System Version - 1.0.1" textFill="#fffafa" />
+            <Label layoutX="161.0" layoutY="440.0" prefHeight="17.0" prefWidth="176.0" text="Devoloped By - Dilsha Prasanna" textFill="#fff9f9" />
+            <Label layoutX="175.0" layoutY="469.0" prefHeight="17.0" prefWidth="176.0" text="dilshaprasanna6@gmail.com" textFill="#fff9f9" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane fx:id="signInContext" prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="103.0" layoutY="222.0" prefWidth="174.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px;" />
+            <PasswordField fx:id="pwdPassword" layoutX="104.0" layoutY="272.0" prefHeight="25.0" prefWidth="173.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px;" />
+            <FontAwesomeIconView fill="#0598ff" glyphName="USER" layoutX="76.0" layoutY="246.0" size="20" text="" />
+            <FontAwesomeIconView fill="#0598ff" glyphName="KEY" layoutX="74.0" layoutY="294.0" size="20" />
+            <JFXButton layoutX="139.0" layoutY="355.0" onAction="#btnSignInOnAction" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #0598ff;" text="SIGN IN" textFill="WHITE" />
+            <FontAwesomeIconView fill="#0598ff" glyphName="USERS" layoutX="156.0" layoutY="123.0" size="35" text="" />
+            <Label layoutX="120.0" layoutY="148.0" text="User Login" textFill="#0598ff">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="116.0" layoutY="436.0" onAction="#createAccontOnAction" prefHeight="29.0" prefWidth="117.0" style="-fx-background-color: #0598ff;" text="Create Account" textFill="WHITE" />
+            <Text layoutX="166.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Text>
+            <Separator layoutX="8.0" layoutY="406.0" prefHeight="2.0" prefWidth="152.0" />
+            <Separator layoutX="194.0" layoutY="405.0" prefHeight="2.0" prefWidth="152.0" />
+            <JFXCheckBox fx:id="p2" layoutX="123.0" layoutY="315.0" onAction="#showPasswordOnAction" text="Show Password">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <Label fx:id="pwdShowTextField" layoutX="103.0" layoutY="274.0" prefHeight="24.0" prefWidth="174.0" style="-fx-background-color: white;" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

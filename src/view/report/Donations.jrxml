@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Donations" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8d23520b-fcd4-430d-a4c2-46356e63ac15">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="donation_id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="titleBook" class="java.lang.String"/>
+	<field name="Book Category" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="555" height="30" uuid="5bd6b688-c5ca-43cb-9b2d-489d15917116"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[All Donations]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="555" height="1" uuid="f0101465-0651-46cc-a2ec-416fb1e799c2"/>
+			</line>
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" uuid="fafaabc1-0b01-4d29-b756-34bff1eaa695"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="f2be07e0-b125-480b-ab1d-077cf3f79e17">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77ff1eb2-7115-485e-afa5-54917e2db806"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[donation_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="bd304306-c4e2-43c8-aa61-aed4eba6e4b1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="37e75b67-eca1-4744-9335-84f881f6484c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="0" width="100" height="30" uuid="abe3c5c7-963d-4e27-8b58-d6b252d528f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d82dc00a-bd1c-4114-ad74-ea5dfa4b3338"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[titleBook]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="61cf61ff-7e1d-45ec-af5f-88b8bd7d0807">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc311bfa-e643-4343-b408-ecc479935f5f"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="100" height="30" uuid="fc74e263-a261-46ec-b4f2-77d7d7c77ac1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99bda4aa-382e-406e-bbd7-245e6538d7df"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="f4c5b244-4cf2-4300-916c-445008f1406b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77ff1eb2-7115-485e-afa5-54917e2db806"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{donation_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="10" width="100" height="30" uuid="0389bbb7-89ca-4449-8310-d4b7d4f1f97f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="37e75b67-eca1-4744-9335-84f881f6484c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="10" width="100" height="30" uuid="6687c7b7-994a-425e-a6fd-ff8683f2ffa5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d82dc00a-bd1c-4114-ad74-ea5dfa4b3338"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titleBook}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="10" width="100" height="30" uuid="0f01f277-21f6-444b-96dc-c28f998a454f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc311bfa-e643-4343-b408-ecc479935f5f"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Book Category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="10" width="100" height="30" uuid="0fc4abe7-c265-49a8-a1eb-010a035e1d9c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99bda4aa-382e-406e-bbd7-245e6538d7df"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
